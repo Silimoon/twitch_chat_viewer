@@ -1,2 +1,2 @@
 # twitch_chat_viewer
-You can watch twitch chats!
+You can watch twitch chats with this!
