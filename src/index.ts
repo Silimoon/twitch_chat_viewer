@@ -12,8 +12,8 @@ clearSaves("logs");
 //the interval size for checking
 const second = 15;
 
-//add the channels to watch
-const channels: string[] = ["fuyumitoba"];
+//==============> ADD THE CHANNELS TO WATCH HERE || Example: ["channel1", "channel2", "channel3"] <================ 
+const channels: string[] = [""];
 
 //runs every ${second} seconds
 const job = schedule.scheduleJob(`*/${second} * * * * *`, async function(){
