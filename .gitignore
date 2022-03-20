@@ -1,4 +1,5 @@
 data/
 logs/
+dist/
 node_modules/
 ./package-lock.json
