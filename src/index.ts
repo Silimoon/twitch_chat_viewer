@@ -3,7 +3,7 @@ import schedule from 'node-schedule';
 import fs from 'fs';
 import path from 'path'
 
-const titles = ["BROADCASTER", "VIP", "MOD", "Staff", "Admin", "Global mod", "Viewer"]
+const titles = ["BROADCASTER", "VIP", "MOD", "Staff", "Admin", "Global mod", "Viewer"];
 
 //clearing the logs and data once when starting
 clearSaves("data");
@@ -31,12 +31,12 @@ const job = schedule.scheduleJob(`*/${second} * * * * *`, async function(){
         viewer.forEach((e, i) => {
             if(e.joined.length) {
                 changes = true;
-                console.log(titles[i] + " joined", e.joined, date );
+                //console.log(titles[i] + " joined", e.joined, date );
                 addToLogs(filename, titles[i] + " joined " +"\n " + e.joined.map((e) => {return `${e.name} joined at ${e.joinedAt}`}).join("\n ") + "\n", channel);
             }
             if(e.left.length) {
                 changes = true;
-                console.log(titles[i] + " left", e.left, date );
+                //console.log(titles[i] + " left", e.left, date );
                 e.left.sort((a,b) => a.stayedSince-b.stayedSince)
                 addToLogs(filename, titles[i] + " left " + "\n " + e.left.map((ele) => {
                     return `${ele.name} joined at ${ele.joinedAt} and stayed since ${computeTime(ele.stayedSince)}`
