@@ -1,6 +1,7 @@
 # twitch_chat_viewer
 
-######OUTDATED#####
+######OUTDATED######
+
 You can watch twitch chats with this!
 
 YOU REQUIRE https://nodejs.org/en/download/ for installing!
